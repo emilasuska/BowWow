@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>BowWow</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="getQueryParameter.js"></script>
+        <script src="index.js"></script>
+    </head>
+
+    <body class="w3-center w3-light-gray">
+        <h1 class="title w3-text-brown">BowWow 🐕</h1>
+
+        <div class="w3-xlarge">
+            <input id="filter" type="text" placeholder=" 🐩 breed" autofocus>
+            <button id="filterButton" class="w3-button w3-large w3-round w3-brown">
+                🔍 Filter
+            </button>
+        </div>
+
+        <div class="w3-center error">
+            <span>&nbsp;</span>
+            <span id="noMatchesError" hidden>No breeds match the filter.</span>
+            <span id="getBreedsError" hidden>Error getting all breeds.</span>
+            <span id="getImageError" hidden>Error getting an image.</span>
+        </div>
+
+        <table class="content">
+            <tbody>
+                <tr>
+                    <td class="breedsColumn">
+                        <div class="w3-xlarge w3-text-brown">Breeds</div>
+                        <ul id="breeds" class="w3-ul w3-hoverable"></ul>
+                    </td>
+                    <td>
+                        <div class="w3-xlarge w3-text-brown">Images</div>
+                        <div id="images"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div id="busy" hidden>
+            <img src="https://loading.io/spinners/fidget-spinner/index.fidget-spinner.gif"/>
+        </div>
+    </body>
+</html>
